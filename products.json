@@ -6,7 +6,8 @@
       "title": "Nike",
       "details": "Classic comfort with modern style.",
       "price": 120,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 45
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "title": "iPhone 15 Pro",
       "details": "The ultimate smartphone with titanium design.",
       "price": 999,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 25
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "title": "Essential Hoodie",
       "details": "Soft fleece for everyday warmth.",
       "price": 55,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 60
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "title": "Smart Watch Series 9",
       "details": "Advanced health tracking on your wrist.",
       "price": 399,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 32
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "title": "Traveler Backpack",
       "details": "Water-resistant with 15-inch laptop sleeve.",
       "price": 85,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 55
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "title": "Modern Table Lamp",
       "details": "Sleek LED lighting for your workspace.",
       "price": 45,
-      "category": "Home Decor"
+      "category": "Home Decor",
+      "quantity": 40
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "title": "Adidas Ultraboost",
       "details": "Energy-returning cushioning for long runs.",
       "price": 180,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 28
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "title": "Noise Cancelling Headphones",
       "details": "Immersive sound with 40-hour battery life.",
       "price": 299,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 35
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "title": "Cotton Crew Tee",
       "details": "100% organic cotton, breathable fit.",
       "price": 25,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 120
     },
     {
       "id": 10,
@@ -78,7 +87,8 @@
       "title": "Leather Bifold Wallet",
       "details": "Slim profile with RFID protection.",
       "price": 40,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 80
     },
     {
       "id": 11,
@@ -86,7 +96,8 @@
       "title": "Artificial Monstera",
       "details": "Lifelike greenery without the maintenance.",
       "price": 60,
-      "category": "Home Decor"
+      "category": "Home Decor",
+      "quantity": 22
     },
     {
       "id": 12,
@@ -94,7 +105,8 @@
       "title": "Vans Old Skool",
       "details": "The classic skate shoe that never fades.",
       "price": 70,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 65
     },
     {
       "id": 13,
@@ -102,7 +114,8 @@
       "title": "Graphic Drawing Tablet",
       "details": "Pressure-sensitive pen for digital artists.",
       "price": 250,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 24
     },
     {
       "id": 14,
@@ -110,7 +123,8 @@
       "title": "Puffer Winter Jacket",
       "details": "Insulated for sub-zero temperatures.",
       "price": 150,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 30
     },
     {
       "id": 15,
@@ -118,7 +132,8 @@
       "title": "Aviator Sunglasses",
       "details": "Polarized lenses with gold frames.",
       "price": 130,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 42
     },
     {
       "id": 16,
@@ -126,7 +141,8 @@
       "title": "Geometric Area Rug",
       "details": "Soft texture with a modern pattern.",
       "price": 210,
-      "category": "Home Decor"
+      "category": "Home Decor",
+      "quantity": 21
     },
     {
       "id": 17,
@@ -134,7 +150,8 @@
       "title": "Air Jordan 1",
       "details": "Iconic high-top basketball sneakers.",
       "price": 170,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 26
     },
     {
       "id": 18,
@@ -142,7 +159,8 @@
       "title": "Mirrorless Camera",
       "details": "4K video and high-resolution stills.",
       "price": 1200,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 23
     },
     {
       "id": 19,
@@ -150,7 +168,8 @@
       "title": "Slim Fit Denim",
       "details": "Classic blue jeans with a hint of stretch.",
       "price": 65,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 75
     },
     {
       "id": 20,
@@ -158,7 +177,8 @@
       "title": "Reversible Leather Belt",
       "details": "Two colors in one versatile accessory.",
       "price": 35,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 90
     },
     {
       "id": 21,
@@ -166,7 +186,8 @@
       "title": "Scented Soy Candle",
       "details": "Lavender and vanilla for relaxation.",
       "price": 20,
-      "category": "Home Decor"
+      "category": "Home Decor",
+      "quantity": 150
     },
     {
       "id": 22,
@@ -174,7 +195,8 @@
       "title": "Classic Crocs",
       "details": "Lightweight, water-friendly comfort.",
       "price": 50,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 110
     },
     {
       "id": 23,
@@ -182,7 +204,8 @@
       "title": "Mechanical Keyboard",
       "details": "RGB lighting with tactile switches.",
       "price": 110,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 48
     },
     {
       "id": 24,
@@ -190,7 +213,8 @@
       "title": "Mesh Gym Shorts",
       "details": "Moisture-wicking fabric for workouts.",
       "price": 30,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 85
     },
     {
       "id": 25,
@@ -198,7 +222,8 @@
       "title": "Cashmere Scarf",
       "details": "Ultra-soft and stylish for winter.",
       "price": 95,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 38
     },
     {
       "id": 26,
@@ -206,7 +231,8 @@
       "title": "Round Wall Mirror",
       "details": "Minimalist design with a black frame.",
       "price": 75,
-      "category": "Home Decor"
+      "category": "Home Decor",
+      "quantity": 29
     },
     {
       "id": 27,
@@ -214,7 +240,8 @@
       "title": "Puma Suede",
       "details": "Vintage-inspired street style.",
       "price": 80,
-      "category": "Shoes"
+      "category": "Shoes",
+      "quantity": 52
     },
     {
       "id": 28,
@@ -222,7 +249,8 @@
       "title": "Wireless Gaming Mouse",
       "details": "High-precision sensor and ergo grip.",
       "price": 70,
-      "category": "Electronics"
+      "category": "Electronics",
+      "quantity": 64
     },
     {
       "id": 29,
@@ -230,7 +258,8 @@
       "title": "Performance Socks (3pk)",
       "details": "Arch support for long-distance comfort.",
       "price": 15,
-      "category": "Apparel"
+      "category": "Apparel",
+      "quantity": 200
     },
     {
       "id": 30,
@@ -238,7 +267,8 @@
       "title": "Snapback Baseball Cap",
       "details": "Adjustable fit with embroidered logo.",
       "price": 28,
-      "category": "Accessories"
+      "category": "Accessories",
+      "quantity": 95
     }
   ]
 }
