@@ -1,0 +1,40 @@
+.not-found-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    align-items: center;
+    font-family: 'Arial';
+    justify-content: space-between;
+    height: fit-content;
+}
+
+.not-found-content h1 {
+    font-size: 200px;
+    color: rgb(161, 0, 0);
+}
+
+.not-found-content h3 {
+    color: gray;
+}
+
+.not-found-content p {margin-top: 10px;}
+
+.home-btn {
+    background-color: black;
+    padding: 4px 8px;
+    border: none;}
+
+.not-found-content a {
+    color: black;
+    text-decoration: none;
+}
+
+.not-found-details {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(172, 172, 172, 0.286);
+    border-radius: 10px;
+}
+

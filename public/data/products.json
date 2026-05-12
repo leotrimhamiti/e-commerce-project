@@ -1,0 +1,46 @@
+ 
+{"products": [
+  { "id": 1, "imgPath": "/assets/nike.jpg", "title": "Nike", "details": "Classic comfort with modern style.", "price": 120, "category": "Shoes" },
+  { "id": 2, "imgPath": "/assets/iphone15.jpg", "title": "iPhone 15 Pro", "details": "The ultimate smartphone with titanium design.", "price": 999, "category": "Electronics" },
+  { "id": 3, "imgPath": "/assets/hoodie.jpg", "title": "Essential Hoodie", "details": "Soft fleece for everyday warmth.", "price": 55, "category": "Apparel" },
+  { "id": 4, "imgPath": "/assets/watch.jpg", "title": "Smart Watch Series 9", "details": "Advanced health tracking on your wrist.", "price": 399, "category": "Electronics" },
+  { "id": 5, "imgPath": "/assets/backpack.jpg", "title": "Traveler Backpack", "details": "Water-resistant with 15-inch laptop sleeve.", "price": 85, "category": "Accessories" },
+  { "id": 6, "imgPath": "/assets/lamp.jpg", "title": "Modern Table Lamp", "details": "Sleek LED lighting for your workspace.", "price": 45, "category": "Home Decor" },
+  { "id": 7, "imgPath": "/assets/adidas.jpg", "title": "Adidas Ultraboost", "details": "Energy-returning cushioning for long runs.", "price": 180, "category": "Shoes" },
+  { "id": 8, "imgPath": "/assets/headphones.jpg", "title": "Noise Cancelling Headphones", "details": "Immersive sound with 40-hour battery life.", "price": 299, "category": "Electronics" },
+  { "id": 9, "imgPath": "/assets/tshirt.jpg", "title": "Cotton Crew Tee", "details": "100% organic cotton, breathable fit.", "price": 25, "category": "Apparel" },
+  { "id": 10, "imgPath": "/assets/wallet.jpg", "title": "Leather Bifold Wallet", "details": "Slim profile with RFID protection.", "price": 40, "category": "Accessories" },
+  { "id": 11, "imgPath": "/assets/plant.jpg", "title": "Artificial Monstera", "details": "Lifelike greenery without the maintenance.", "price": 60, "category": "Home Decor" },
+  { "id": 12, "imgPath": "/assets/vans.jpg", "title": "Vans Old Skool", "details": "The classic skate shoe that never fades.", "price": 70, "category": "Shoes" },
+  { "id": 13, "imgPath": "/assets/tablet.jpg", "title": "Graphic Drawing Tablet", "details": "Pressure-sensitive pen for digital artists.", "price": 250, "category": "Electronics" },
+  { "id": 14, "imgPath": "/assets/jacket.jpg", "title": "Puffer Winter Jacket", "details": "Insulated for sub-zero temperatures.", "price": 150, "category": "Apparel" },
+  { "id": 15, "imgPath": "/assets/sunglasses.jpg", "title": "Aviator Sunglasses", "details": "Polarized lenses with gold frames.", "price": 130, "category": "Accessories" },
+  { "id": 16, "imgPath": "/assets/rug.jpg", "title": "Geometric Area Rug", "details": "Soft texture with a modern pattern.", "price": 210, "category": "Home Decor" },
+  { "id": 17, "imgPath": "/assets/jordan.jpg", "title": "Air Jordan 1", "details": "Iconic high-top basketball sneakers.", "price": 170, "category": "Shoes" },
+  { "id": 18, "imgPath": "/assets/camera.jpg", "title": "Mirrorless Camera", "details": "4K video and high-resolution stills.", "price": 1200, "category": "Electronics" },
+  { "id": 19, "imgPath": "/assets/jeans.jpg", "title": "Slim Fit Denim", "details": "Classic blue jeans with a hint of stretch.", "price": 65, "category": "Apparel" },
+  { "id": 20, "imgPath": "/assets/belt.jpg", "title": "Reversible Leather Belt", "details": "Two colors in one versatile accessory.", "price": 35, "category": "Accessories" },
+  { "id": 21, "imgPath": "/assets/candle.jpg", "title": "Scented Soy Candle", "details": "Lavender and vanilla for relaxation.", "price": 20, "category": "Home Decor" },
+  { "id": 22, "imgPath": "/assets/crocs.jpg", "title": "Classic Crocs", "details": "Lightweight, water-friendly comfort.", "price": 50, "category": "Shoes" },
+  { "id": 23, "imgPath": "/assets/keyboard.jpg", "title": "Mechanical Keyboard", "details": "RGB lighting with tactile switches.", "price": 110, "category": "Electronics" },
+  { "id": 24, "imgPath": "/assets/shorts.jpg", "title": "Mesh Gym Shorts", "details": "Moisture-wicking fabric for workouts.", "price": 30, "category": "Apparel" },
+  { "id": 25, "imgPath": "/assets/scarf.jpg", "title": "Cashmere Scarf", "details": "Ultra-soft and stylish for winter.", "price": 95, "category": "Accessories" },
+  { "id": 26, "imgPath": "/assets/mirror.jpg", "title": "Round Wall Mirror", "details": "Minimalist design with a black frame.", "price": 75, "category": "Home Decor" },
+  { "id": 27, "imgPath": "/assets/puma.jpg", "title": "Puma Suede", "details": "Vintage-inspired street style.", "price": 80, "category": "Shoes" },
+  { "id": 28, "imgPath": "/assets/mouse.jpg", "title": "Wireless Gaming Mouse", "details": "High-precision sensor and ergo grip.", "price": 70, "category": "Electronics" },
+  { "id": 29, "imgPath": "/assets/socks.jpg", "title": "Performance Socks (3pk)", "details": "Arch support for long-distance comfort.", "price": 15, "category": "Apparel" },
+  { "id": 30, "imgPath": "/assets/hat.jpg", "title": "Snapback Baseball Cap", "details": "Adjustable fit with embroidered logo.", "price": 28, "category": "Accessories" }
+]
+,
+  "users": [
+    {
+      "id": "1",
+      "username": "TreezyDev",
+      "email": "treezy@example.com",
+      "password": "password123",
+      "role": "admin"
+    }
+  ],
+  "orders": []
+}
+
