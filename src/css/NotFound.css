@@ -6,6 +6,7 @@
     font-family: 'Arial';
     justify-content: space-between;
     height: fit-content;
+    background-color: #acacac;
 }
 
 .not-found-content h1 {
@@ -34,7 +35,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(172, 172, 172, 0.286);
     border-radius: 10px;
 }
 

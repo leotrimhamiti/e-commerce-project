@@ -63,5 +63,29 @@
 }
 
 .quantity {
-    color: blue;
+    color: rgb(88, 88, 88);
+    font-size: 14px;
 }
+
+.quantity-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    border: solid rgb(86, 86, 255) 0.4px;
+    
+}
+
+.increment-quantity, .decrement-quantity {
+    background-color: rgb(86, 86, 255);
+    cursor: pointer;
+    color: white;
+    border: none;
+    padding: 4px;
+    width: 30px
+}
+
+.increment-quantity:hover, .decrement-quantity:hover {
+    background-color: rgb(39, 39, 250);
+}
+

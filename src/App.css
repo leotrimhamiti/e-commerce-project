@@ -26,5 +26,6 @@
 
 main, .content, .routes-container { 
     flex: 1; 
+    background-color: white;
 }
 

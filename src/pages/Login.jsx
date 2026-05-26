@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import '../css/Login.css';
 import { Navigate } from 'react-router-dom';
 
-function Login({ loggedIn, setLoggedIn }) { // Receive the prop here
+function Login({ loggedIn, setLoggedIn }) { 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [serverError, setServerError] = useState("");
@@ -16,27 +16,27 @@ function Login({ loggedIn, setLoggedIn }) { // Receive the prop here
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    setServerError(""); // Clear previous errors
+    setServerError(""); 
 
-    // 1. Pull the "database" from localStorage
+    
     const existingUsers = JSON.parse(localStorage.getItem('users')) || [];
 
-    // 2. Find if a user matches BOTH email (or username) and password
+   
     const validUser = existingUsers.find(
         (u) => (u.email === username || u.username === username) && u.password === password
     );
 
     if (validUser) {
-        // 3. Create the session token
+        
         localStorage.setItem('accessToken', "mock_jwt_" + Date.now());
         
-        // 4. Store the logged-in user's data for the Profile page
+       
         localStorage.setItem('currentUser', JSON.stringify(validUser));
         
-        // 5. Update global state in App.jsx
+       
         setLoggedIn(true); 
         
-        // 6. Redirect
+        
         navigate('/');
     } else {
         setServerError("Invalid email or password.");

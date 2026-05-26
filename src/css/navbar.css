@@ -7,7 +7,7 @@
     align-items: center;
     gap: 20px;
     color: white;
-    font-family: 'Arial';
+    font-family: 'Arial', sans-serif;
     position: relative;
     z-index: 1000;
 }
@@ -22,21 +22,24 @@
     color: white;
 }
 
-/* Search Bar Logic */
+
 .search-form {
     display: flex;
     flex-direction: row;
     align-items: center;
     position: relative;
     width: 40%;
+    transition: width 0.3s ease-in-out;
 }
 
-.navbar input {
+.search-form input[type='text'] {
     padding: 10px 20px;
     border-radius: 6px;
     border: none;
     width: 100%;
     outline: none;
+    transition: all 0.3s ease-in-out;
+    font-size: 12px;
 }
 
 .search-btn {
@@ -50,8 +53,8 @@
     border: none;
     background-color: darkgreen;
     color: white;
-    border-top-right-radius: 5px;
-    border-bottom-right-radius: 5px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
     cursor: pointer;
 }
 
@@ -73,8 +76,6 @@
     background-color: transparent;
     color: white;
     cursor: pointer;
-    
-
 }
 
 .search-btn:hover {
@@ -125,21 +126,19 @@
 }
 
 .user-name {
-    color: white; /* Visible on black */
+    color: white;
 }
 
 .profile-dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
-    
     background-color: white;
     min-width: 140px;
     box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
-    z-index: 1001;
+    z-index: 1010;
     border-radius: 4px;
     overflow: hidden;
-   
 }
 
 .profile-container:hover .profile-dropdown-content {
@@ -189,28 +188,59 @@
 
 
 @media (max-width: 630px) {
-    .search-btn {
-        padding: 10.2px;
-    }
-    .search-btn p { display: none; }
-    .search-logo { display: block;
-     }
-    .search-form { width: 100%;
-    }
 
-    .navbar input {
-        padding: 10px;
-    }
-  
-    .navbar p {
+    .login-btn, .signup-btn {
         display: none;
     }
-    .login-btn, .signup-btn 
-    {display: none;
-    }
+
     .join-btn {
         display: block;
+        width: 100%;
+       
+    }
+    
+    .navbar:has(.search-form.focused) .profile-container {
+        display: none !important;
+    }
+
+
+    .navbar p {
+        display: none !important;}
+
+   
+    .search-form { 
+        display: flex !important;
+        align-items: center !important;
+        width: 100%;
+        transition: width 0.25s ease-in-out !important;
     }
 
     
+    .search-form.focused {
+        width:100% !important; 
+    }
+
+    /* 4. Input-i brenda formës */
+    .search-form input[type='text'] {
+        width: 100% !important;
+        display: block !important;
+        padding: 10px !important;
+        border-radius: 6px !important;
+        font-size: 12px !important; 
+    }
+
+    .search-btn {
+        padding: 0 15px !important;
+        border-top-right-radius: 4px !important;
+        border-bottom-right-radius: 4px !important;
+        height: 100% !important;
+    }
+
+    .search-btn p { 
+        display: none !important; 
+    }
+
+    .search-logo { 
+        display: block !important;
+    }
 }

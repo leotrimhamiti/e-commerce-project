@@ -22,6 +22,27 @@ function App() {
     return user ? `cart_${user.email}` : null;
   };
 
+  const onAddtoCart = (product, quantityToAdd) => {
+    setCart((prevCart) => {
+        const isItemInCart = prevCart.find((item) => item.id === product.id);
+
+        if (isItemInCart) {
+            return prevCart.map((item) =>
+                item.id === product.id
+                    ? { ...item, cartQuantity: item.cartQuantity + quantityToAdd }
+                    : item
+            );
+        }
+        return [...prevCart, { ...product, cartQuantity: quantityToAdd }];
+    });
+    alert(`U shtuan ${quantityToAdd} njësi në shportë!`);
+
+    if(product.quantity = 0) {
+      alert(`${product.title}Product out of stock, sorry`)
+      return;
+    }
+};
+
   useEffect(() => {
     const token = localStorage.getItem('accessToken');
     if (token) {
@@ -35,28 +56,45 @@ function App() {
     }
   }, [loggedIn]);
 
-  const addToCart = (product) => {
-    if (!loggedIn) {
-      setNotification("⚠️ Please log in to add items to your cart");
-      setTimeout(() => setNotification(""), 2000);
-      return;
+const addToCart = (product, quantityToAdd) => {
+  // 1. Sigurohemi që përdoruesi është i loguar
+  if (!loggedIn) {
+    setNotification("⚠️ Please log in to add items to your cart");
+    setTimeout(() => setNotification(""), 2000);
+    return;
+  }
+
+
+
+  const userKey = getCartKey();
+  if (!userKey) return;
+
+  setCartItems((prevCart) => {
+    let updatedCart;
+    
+
+    const existingItem = prevCart.find((item) => item.id === product.id);
+
+    if (existingItem) {
+      // Nëse po, rrisim sasinë (cartQuantity)
+      updatedCart = prevCart.map((item) =>
+        item.id === product.id
+          ? { ...item, cartQuantity: (item.cartQuantity || 0) + quantityToAdd }
+          : item
+      );
+    } else {
+     
+      updatedCart = [...prevCart, { ...product, cartQuantity: quantityToAdd }];
     }
 
-    const userKey = getCartKey();
-    if (!userKey) return;
+    
+    localStorage.setItem(userKey, JSON.stringify(updatedCart));
+    return updatedCart;
+  });
 
-    setCartItems((prevCart) => {
-      const updatedCart = [...prevCart, product];
-      localStorage.setItem(userKey, JSON.stringify(updatedCart));
-      return updatedCart;
-    });
-
-    setNotification(`${product.title} added to your personal cart!`);
-
-    setTimeout(() => {
-      setNotification("");
-    }, 2000);
-  };
+  setNotification(`✅ Added ${quantityToAdd} x ${product.title} to cart!`);
+  setTimeout(() => setNotification(""), 2000);
+};
 
   const handleCategoryChange = (cat) => {
     setSelectedCategory(cat);
@@ -78,13 +116,14 @@ function App() {
         </div>
       )}
 
-      <Navbar 
-        cartCount={cartItems.length} 
-        onCategoryChange={handleCategoryChange} 
-        onSearchChange={handleSearchChange}
-        loggedIn={loggedIn}
-        setLoggedIn={setLoggedIn}
-      />
+     <Navbar 
+  // Llogarit totalin e të gjitha sasive në shportë
+  cartCount={cartItems.reduce((acc, item) => acc + (item.cartQuantity || 0), 0)} 
+  onCategoryChange={handleCategoryChange} 
+  onSearchChange={handleSearchChange}
+  loggedIn={loggedIn}
+  setLoggedIn={setLoggedIn}
+/>
       <main>
       <Routes>
         <Route 
