@@ -1,8 +1,22 @@
-.app-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.app-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
 
 .custom-notification {
   position: fixed;
@@ -27,5 +41,11 @@
 main, .content, .routes-container { 
     flex: 1; 
     background-color: white;
+}
+
+@media (max-width: 630px) {
+  main {
+    flex: unset;
+  }
 }
 
