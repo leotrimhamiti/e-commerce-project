@@ -5,12 +5,19 @@ import storeChartLogo from '../logos/store-chart.jpg';
 import searchLogo from '../logos/search.webp';
 
 function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLoggedIn }) {
-    const categoriesList = ["All", "Electronics", "Home Decor", "Shoes", "Accessories", "Apparel"];
+
+    const categoriesList = [
+        "All",
+        "Electronics",
+        "Home Decor",
+        "Shoes",
+        "Accessories",
+        "Apparel"
+    ];
 
     const [categories, setCategories] = useState(false);
     const [searchInput, setSearchInput] = useState("");
     const [placeholder, setPlaceholder] = useState("Search for products or categories");
-    const [isFocused, setIsFocused] = useState(false);
     const [userData, setUserData] = useState(null);
 
     const navigate = useNavigate();
@@ -28,9 +35,10 @@ function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLogg
     // Responsive placeholder
     useEffect(() => {
         const updatePlaceholder = () => {
-            setPlaceholder(window.innerWidth <= 630
-                ? "Search"
-                : "Search for products or categories"
+            setPlaceholder(
+                window.innerWidth <= 630
+                    ? "Search"
+                    : "Search for products or categories"
             );
         };
 
@@ -49,7 +57,6 @@ function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLogg
         onSearchChange(searchInput);
         navigate('/');
         setSearchInput("");
-        setIsFocused(false);
     };
 
     const handleLogout = () => {
@@ -60,23 +67,23 @@ function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLogg
     };
 
     return (
-        <div className='navbar'>
+        <div className="navbar">
 
             {/* LOGO */}
             <div
-                className='navbar-logo'
-                style={{ cursor: 'pointer' }}
+                className="navbar-logo"
                 onClick={() => {
                     onCategoryChange("All");
                     navigate("/");
                 }}
+                style={{ cursor: "pointer" }}
             >
                 <p>E-Commerce</p>
             </div>
 
             {/* CATEGORIES */}
-            <div className='categories-links'>
-                <button className='categories' onClick={handleCategories}>
+            <div className="categories-links">
+                <button className="categories" onClick={handleCategories}>
                     Categories
                 </button>
 
@@ -100,27 +107,19 @@ function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLogg
             </div>
 
             {/* SEARCH */}
-            <div className={`search-form ${isFocused ? 'focused' : ''}`}>
+            <div className="search-form">
                 <input
-                    type='text'
+                    type="text"
                     placeholder={placeholder}
                     value={searchInput}
                     onChange={(e) => setSearchInput(e.target.value)}
-                    onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-                    onFocus={() => setIsFocused(true)}
-                    onBlur={() => {
-                        // safer for iPhone Safari
-                        setTimeout(() => setIsFocused(false), 150);
-                    }}
+                    onKeyDown={(e) => e.key === "Enter" && handleSearch()}
                 />
 
-                <button
-                    className='search-btn'
-                    onClick={handleSearch}
-                >
+                <button className="search-btn" onClick={handleSearch}>
                     <p>Search</p>
                     <img
-                        className='search-logo'
+                        className="search-logo"
                         src={searchLogo}
                         width={20}
                         alt="search"
@@ -128,50 +127,58 @@ function Navbar({ onCategoryChange, onSearchChange, cartCount, loggedIn, setLogg
                 </button>
             </div>
 
-            {/* AUTH SECTION */}
+            {/* AUTH */}
             {loggedIn ? (
                 <div className="profile-container">
                     <span className="user-name">
-                        {userData?.username || 'User'}&nbsp;▼
+                        {userData?.username || "User"} ▼
                     </span>
 
                     <div className="profile-dropdown-content">
                         <Link to="/cart">My Cart</Link>
                         <button
-                            onClick={handleLogout}
-                            className="logout-action-btn"
-                        >
+                            onClick={handleLogout} className="logout-action-btn">
                             Logout
                         </button>
                     </div>
                 </div>
             ) : (
-                <div className='navbar-links'>
-                    <Link className="join-link" to="/login">
-                        <button className='login-btn'>Log in</button>
+                <div className="navbar-links">
+                    <Link to="/login">
+                        <button className="login-btn">Log in</button>
                     </Link>
 
-                    <Link className='join-link' to="/signup">
-                        <button className='signup-btn'>Sign up</button>
+                    <Link to="/signup">
+                        <button className="signup-btn">Sign up</button>
                     </Link>
 
-                    <Link className="join-link" to="/login">
-                        <button className='join-btn'>JOIN</button>
+                    <Link to="/login">
+                        <button className="join-btn">JOIN</button>
                     </Link>
                 </div>
             )}
 
             {/* CART */}
             {loggedIn && (
-                <div className='store-chart-log-in'>
-                    <Link to="/cart" style={{ textDecoration: 'none' }}>
-                        <button className='chart-btn'>
-                            <img src={storeChartLogo} width={20} alt="cart" />
-                            <span className="cart-count">{cartCount}</span>
+                <div className="store-chart-log-in">
+                    <Link
+                        to="/cart"
+                        style={{ textDecoration: "none" }}
+                    >
+                        <button className="chart-btn">
+                            <img
+                                src={storeChartLogo}
+                                width={20}
+                                alt="cart"
+                            />
+                            <span className="cart-count">
+                                {cartCount}
+                            </span>
                         </button>
                     </Link>
                 </div>
             )}
+
         </div>
     );
 }
