@@ -52,7 +52,7 @@
       "details": "Sleek LED lighting for your workspace.",
       "price": 45,
       "category": "Home Decor",
-      "quantity": 40
+      "quantity": 0
     },
     {
       "id": 7,
@@ -79,7 +79,7 @@
       "details": "100% organic cotton, breathable fit.",
       "price": 25,
       "category": "Apparel",
-      "quantity": 120
+      "quantity": 0
     },
     {
       "id": 10,
@@ -151,7 +151,7 @@
       "details": "Iconic high-top basketball sneakers.",
       "price": 170,
       "category": "Shoes",
-      "quantity": 26
+      "quantity": 0
     },
     {
       "id": 18,
