@@ -18,7 +18,7 @@ function Cart({ cart, setCartItem, loggedIn, setNotification }) {
 
     if (!loggedIn) {
         return <Navigate to='/login' />
-    }
+    } 
 
     const totalPrice = items.reduce((acc, item) => {
         const qty = item.cartQuantity || 1;

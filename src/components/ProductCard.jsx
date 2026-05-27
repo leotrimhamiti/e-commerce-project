@@ -58,7 +58,7 @@ function SingleProduct({ product, onAddtoCart }) {
     );
 }
 
-// 2. Komponenti Kryesor (Listuesi)
+
 function ProductCard({ onAddtoCart, selectedCategory, searchFilter }) {
     const [products, setProducts] = useState([]);
     const [load, setLoading] = useState(true);

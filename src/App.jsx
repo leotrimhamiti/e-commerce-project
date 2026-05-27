@@ -14,7 +14,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [searchFilter, setSearchFilter] = useState("");
   const [cartItems, setCartItems] = useState([]);
-  const [loggedIn, setLoggedIn] = useState(false);
+  const [loggedIn, setLoggedIn] = useState(() => {
+  return !!localStorage.getItem('accessToken');
+   });
   const [notification, setNotification] = useState("");
 
   const getCartKey = () => {
@@ -43,21 +45,25 @@ function App() {
     }
 };
 
-  useEffect(() => {
-    const token = localStorage.getItem('accessToken');
-    if (token) {
-      setLoggedIn(true);
-      const userKey = getCartKey();
-      const savedCart = JSON.parse(localStorage.getItem(userKey)) || [];
-      setCartItems(savedCart);
-    } else {
-      setLoggedIn(false);
-      setCartItems([]);
-    }
-  }, [loggedIn]);
+ useEffect(() => {
+  const token = localStorage.getItem('accessToken');
+
+  setLoggedIn(!!token);
+
+  if (token) {
+    const userKey = getCartKey();
+
+    const savedCart =
+      JSON.parse(localStorage.getItem(userKey)) || [];
+
+    setCartItems(savedCart);
+  } else {
+    setCartItems([]);
+  }
+
+}, []);
 
 const addToCart = (product, quantityToAdd) => {
-  // 1. Sigurohemi që përdoruesi është i loguar
   if (!loggedIn) {
     setNotification("⚠️ Please log in to add items to your cart");
     setTimeout(() => setNotification(""), 2000);
@@ -76,7 +82,6 @@ const addToCart = (product, quantityToAdd) => {
     const existingItem = prevCart.find((item) => item.id === product.id);
 
     if (existingItem) {
-      // Nëse po, rrisim sasinë (cartQuantity)
       updatedCart = prevCart.map((item) =>
         item.id === product.id
           ? { ...item, cartQuantity: (item.cartQuantity || 0) + quantityToAdd }
@@ -109,7 +114,6 @@ const addToCart = (product, quantityToAdd) => {
   return (
     <BrowserRouter>
     <div className='app-container'>
-      {/* KETU VENDOSET NJOFTIMI */}
       {notification && (
         <div className="custom-notification">
           {notification}
